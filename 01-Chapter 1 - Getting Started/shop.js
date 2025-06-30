@@ -9,6 +9,10 @@ let inventoryPrices = [3.00, 3.50, 4.00, 4.25]
 let menuList = document.getElementById("coffee-menu")
 
 //Loop through the inventory and create a list item for each coffee
+function populateMenu(container) {
 for (let i = 0; i < inventory.length; i++) {
-    menuList.innerHTML += "<li>" + inventory[i] + " - $" + inventoryPrices[i].toFixed(2) + "</li>"
+    container.innerHTML += "<li>" + inventory[i] + " - $" + inventoryPrices[i].toFixed(2) + "</li>"
 }
+}
+
+populateMenu(menuList)

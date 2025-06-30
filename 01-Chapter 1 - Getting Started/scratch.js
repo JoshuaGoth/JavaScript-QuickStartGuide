@@ -1,11 +1,8 @@
-firstName = prompt("Enter your first name:")
-alert(`Hello, ${firstName}!`)
+greetingContainer = document.getElementById("greeting")
+sayHello = document.getElementById("sayHello")
 
-firstNameTextBox = document.getElementById("firstName");
-submitButton = document.getElementById("submit");
-greetingContainer = document.getElementById("greeting");
+function greeting() {
+    greetingContainer.textContent = "Hello, World!"
+}
 
-submitButton.addEventListener("click", function() {
-    greetingContainer.textContent = "Hello, " + firstNameTextBox.value + "!";
-})
-
+sayHello.addEventListener("click", greeting)
